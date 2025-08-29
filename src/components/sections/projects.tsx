@@ -1,0 +1,84 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { ArrowRight, ShieldCheck } from 'lucide-react';
+
+const projects = [
+  {
+    title: 'Project Infiltrator',
+    description: 'A stealthy C2 framework built with Go and gRPC for red team operations.',
+    image: 'https://picsum.photos/600/400',
+    aiHint: 'abstract network',
+    stack: ['Go', 'gRPC', 'Python', 'React'],
+    metrics: ['High Performance', 'Low Detection Rate'],
+    link: '#',
+  },
+  {
+    title: 'SecureAuth Vault',
+    description: 'An end-to-end encrypted password manager with multi-factor authentication.',
+    image: 'https://picsum.photos/600/400',
+    aiHint: 'cyber security',
+    stack: ['Rust', 'WebAssembly', 'Next.js', 'PostgreSQL'],
+    metrics: ['E2E Encrypted', 'Audited'],
+    link: '#',
+  },
+  {
+    title: 'CloudSec Scanner',
+    description: 'Automated security scanner for AWS and GCP configurations.',
+    image: 'https://picsum.photos/600/400',
+    aiHint: 'cloud infrastructure',
+    stack: ['Python', 'Terraform', 'Docker', 'AWS Lambda'],
+    metrics: ['CI/CD Integrated', 'Real-time Alerts'],
+    link: '#',
+  },
+];
+
+export function Projects() {
+  return (
+    <section id="projects" className="py-24 sm:py-32">
+      <div className="container mx-auto">
+        <h2 className="text-3xl font-headline md:text-4xl text-center">My Work</h2>
+        <p className="mt-4 text-lg text-muted-foreground text-center max-w-2xl mx-auto">
+          Here are some of the projects I've worked on. Each one was an opportunity to learn and grow.
+        </p>
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <Card key={project.title} className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1 opacity-90 hover:opacity-100">
+              <CardHeader>
+                <div className="aspect-[3/2] relative">
+                    <Image src={project.image} alt={project.title} fill className="object-cover rounded-t-lg" data-ai-hint={project.aiHint}/>
+                </div>
+                <CardTitle className="pt-4">{project.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="flex-1 space-y-4">
+                <p className="text-muted-foreground">{project.description}</p>
+                <div className="flex flex-wrap gap-2">
+                  {project.stack.map((tech) => (
+                    <Badge key={tech} variant="outline">{tech}</Badge>
+                  ))}
+                </div>
+                <div className="space-y-2">
+                  {project.metrics.map(metric => (
+                      <div key={metric} className="flex items-center text-xs text-muted-foreground">
+                          <ShieldCheck className="w-4 h-4 mr-2 text-primary" />
+                          <span>{metric}</span>
+                      </div>
+                  ))}
+                </div>
+              </CardContent>
+              <CardFooter>
+                <Button asChild variant="secondary" className="w-full">
+                  <Link href={project.link}>
+                    See Writeup <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
