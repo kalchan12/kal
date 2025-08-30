@@ -14,7 +14,7 @@ export function Hero() {
             <span className="glitch" data-text={headline}>{headline}</span>
           </h1>
           <p className="max-w-[700px] text-lg text-muted-foreground md:text-xl">
-            Bridging the gap between offensive and defensive security. I build resilient systems and find the vulnerabilities others miss.
+            Computer Science major passionate about cybersecurity, with a particular focus on penetration testing and ethical hacking.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
