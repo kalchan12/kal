@@ -24,7 +24,7 @@ export function About() {
               I’m a Computer Science major with a strong focus on cybersecurity, especially penetration testing and ethical hacking. I’m skilled in Linux, Bash scripting, and Python, with a solid foundation in general coding and computer science concepts like networking and AI/ML. I’m familiar with Kali Linux and its tools, and I enjoy applying my knowledge through Capture the Flag (CTF) challenges, hacking labs, and hands-on problem-solving.
             </p>
             <p className="mt-4 text-lg text-muted-foreground">
-              When I'm not hunting for vulnerabilities, you can find me participating in CTF competitions, contributing to open-source security tools, or exploring the latest in cybersecurity research. I'm driven by a constant desire to learn and a commitment to making the digital world a safer place.
+              My main interests lie in web and Wi-Fi penetration testing, where I aim to sharpen my skills by constantly experimenting and breaking down systems to understand how they work. I thrive in environments that challenge me to think creatively and approach problems from a hacker’s mindset.
             </p>
           </div>
         </div>
