@@ -42,20 +42,15 @@ export function TextScramble({ text }: { text: string }) {
   useEffect(() => {
     const currentRef = ref.current;
     if (currentRef) {
-      currentRef.addEventListener('mouseenter', () => requestAnimationFrame(scramble));
-      currentRef.addEventListener('mouseleave', reset);
+      requestAnimationFrame(scramble);
     }
     
     return () => {
-        if (currentRef) {
-            currentRef.removeEventListener('mouseenter', () => requestAnimationFrame(scramble));
-            currentRef.removeEventListener('mouseleave', reset);
-        }
         if (animationFrameId.current) {
             cancelAnimationFrame(animationFrameId.current);
         }
     }
   }, [text]);
 
-  return <span ref={ref} className="transition-colors duration-300 hover:text-primary">{currentText}</span>;
+  return <span ref={ref} className="text-primary">{currentText}</span>;
 }
