@@ -12,14 +12,14 @@ const navLinks = [
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center">
-        <div className="mr-4 flex items-center">
+      <div className="container flex h-14 items-center justify-between">
+        <div className="flex items-center">
           <Link href="/" className="flex items-center gap-2 font-headline text-lg font-bold">
             <CodeXml className="h-6 w-6 text-primary" />
             <span>kal@psycho</span>
           </Link>
         </div>
-        <nav className="hidden items-center justify-center gap-4 text-sm md:flex flex-1">
+        <nav className="hidden items-center justify-center gap-4 text-sm md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -30,7 +30,7 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <div className="flex flex-1 items-center justify-end gap-2">
+        <div className="flex items-center justify-end gap-2">
           <Button variant="ghost" size="icon" asChild>
             <Link href="https://github.com" target="_blank" aria-label="GitHub">
               <Github className="h-5 w-5" />
