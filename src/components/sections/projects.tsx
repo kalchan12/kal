@@ -8,11 +8,11 @@ import { ArrowRight, ShieldCheck } from 'lucide-react';
 const projects = [
   {
     title: 'Cybersec notes and CTF writeups',
-    description: 'A stealthy C2 framework built with Go and gRPC for red team operations.',
+    description: 'A collection of my notes and write-ups on Computer Science, Cybersecurity, and CTF challenges.',
     image: 'https://images.unsplash.com/photo-1719253479576-46c24a216c54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHwlMkZoYWNraW5nfGVufDB8fHx8MTc1NjU2NzU2M3ww&ixlib=rb-4.1.0&q=80&w=1080',
     aiHint: 'abstract network',
-    stack: ['Go', 'gRPC', 'Python', 'React'],
-    metrics: ['High Performance', 'Low Detection Rate'],
+    stack: ['Markdown', 'PDF'],
+    metrics: [],
     link: '#',
   },
   {
