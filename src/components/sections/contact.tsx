@@ -25,7 +25,7 @@ export function Contact() {
                     </Link>
                  </Button>
                  <Button asChild className="w-full justify-start gap-3" variant="outline">
-                    <Link href="https://github.com" target="_blank">
+                    <Link href="https://github.com/kalchan12" target="_blank">
                         <Github className="w-4 h-4 text-primary"/>
                         <span>GitHub Profile</span>
                     </Link>

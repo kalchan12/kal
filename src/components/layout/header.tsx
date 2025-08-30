@@ -32,7 +32,7 @@ export function Header() {
         </nav>
         <div className="flex items-center justify-end gap-2">
           <Button variant="ghost" size="icon" asChild>
-            <Link href="https://github.com" target="_blank" aria-label="GitHub">
+            <Link href="https://github.com/kalchan12" target="_blank" aria-label="GitHub">
               <Github className="h-5 w-5" />
             </Link>
           </Button>
