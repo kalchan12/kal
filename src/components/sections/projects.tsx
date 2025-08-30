@@ -18,7 +18,7 @@ const projects = [
   {
     title: 'SecureAuth Vault',
     description: 'An end-to-end encrypted password manager with multi-factor authentication.',
-    image: 'https://picsum.photos/600/400',
+    image: 'https://images.unsplash.com/photo-1699885960867-56d5f5262d38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0eXBlc2NyaXB0fGVufDB8fHx8MTc1NjU2Nzg1MXww&ixlib=rb-4.1.0&q=80&w=1080',
     aiHint: 'cyber security',
     stack: ['Rust', 'WebAssembly', 'Next.js', 'PostgreSQL'],
     metrics: ['E2E Encrypted', 'Audited'],
