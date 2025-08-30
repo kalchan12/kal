@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { AnimatedTerminal } from '../animated-terminal';
 
 export function Hero() {
-  const headline = "Security-Focused Engineer";
+  const headline = "Penetration Testing Enthusiast";
   return (
     <section className="relative w-full py-24 sm:py-32 lg:py-40">
        <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-background via-card to-background"></div>
