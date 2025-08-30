@@ -19,7 +19,7 @@ export function Header() {
             <span>kal@psycho</span>
           </Link>
         </div>
-        <nav className="hidden items-center gap-4 text-sm md:flex flex-1">
+        <nav className="hidden items-center justify-center gap-4 text-sm md:flex flex-1">
           {navLinks.map((link) => (
             <Link
               key={link.href}
