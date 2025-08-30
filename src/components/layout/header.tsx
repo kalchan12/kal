@@ -15,8 +15,8 @@ export function Header() {
       <div className="container flex h-14 items-center justify-between">
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-2 font-headline text-lg font-bold pr-4">
-            <CodeXml className="h-6 w-6 text-primary" />
-            <span>kal@psycho</span>
+            <CodeXml className="h-6 w-6 text-secondary" />
+            <span className="text-secondary">kal@psycho</span>
           </Link>
         </div>
         <nav className="hidden items-center justify-center gap-4 text-sm md:flex">
