@@ -19,9 +19,9 @@ export function Contact() {
              </CardHeader>
              <CardContent className="space-y-4">
                  <Button asChild className="w-full justify-start gap-3" variant="outline">
-                    <Link href="mailto:hello@example.com">
+                    <Link href="mailto:chaladimtsekal@gmail.com">
                         <Mail className="w-4 h-4 text-primary"/>
-                        <span>hello@example.com</span>
+                        <span>chaladimtsekal@gmail.com</span>
                     </Link>
                  </Button>
                  <Button asChild className="w-full justify-start gap-3" variant="outline">
