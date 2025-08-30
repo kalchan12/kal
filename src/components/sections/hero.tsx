@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { AnimatedTerminal } from '../animated-terminal';
-import { TextScramble } from '../text-scramble';
 
 export function Hero() {
   const headline = "Cybersecurity | Computer Science";
@@ -11,8 +10,8 @@ export function Hero() {
        <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-background via-card to-background"></div>
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6 text-center lg:text-left">
-          <h1 className="text-4xl font-headline tracking-tighter sm:text-5xl md:text-5xl lg:text-6xl">
-            <TextScramble text={headline} />
+          <h1 className="text-4xl font-headline tracking-tighter sm:text-5xl md:text-5xl lg:text-6xl text-primary">
+            {headline}
           </h1>
           <p className="max-w-[700px] text-lg text-muted-foreground md:text-xl">
             Computer Science major passionate about cybersecurity, with a particular focus on penetration testing and ethical hacking.
