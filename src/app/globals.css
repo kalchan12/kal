@@ -56,22 +56,10 @@
 .glitch {
   position: relative;
   text-shadow: 0.05em 0 0 hsl(var(--secondary) / 0.75), -0.05em 0 0 hsl(var(--primary) / 0.75);
+  animation: glitch-anim 3s infinite linear;
 }
 
-.glitch::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: hsl(var(--background));
-  overflow: hidden;
-  left: 2px;
-  text-shadow: -2px 0 hsl(var(--secondary));
-  animation: glitch-anim-1 2s infinite linear alternate-reverse;
-}
-
+.glitch::before,
 .glitch::after {
   content: attr(data-text);
   position: absolute;
@@ -81,23 +69,56 @@
   height: 100%;
   background: hsl(var(--background));
   overflow: hidden;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 hsl(var(--secondary));
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
   left: -2px;
   text-shadow: 2px 0 hsl(var(--primary));
+  clip-path: polygon(0 100%, 100% 100%, 100% 55%, 0 55%);
   animation: glitch-anim-2 2s infinite linear alternate-reverse;
 }
 
+@keyframes glitch-anim {
+  0% { text-shadow: 0.05em 0 0 hsl(var(--secondary) / 0.75), -0.05em 0 0 hsl(var(--primary) / 0.75); }
+  14% { text-shadow: 0.05em 0 0 hsl(var(--secondary) / 0.75), -0.05em 0 0 hsl(var(--primary) / 0.75); }
+  15% { text-shadow: -0.05em -0.025em 0 hsl(var(--secondary) / 0.75), 0.025em 0.025em 0 hsl(var(--primary) / 0.75); }
+  19% { text-shadow: -0.05em -0.025em 0 hsl(var(--secondary) / 0.75), 0.025em 0.025em 0 hsl(var(--primary) / 0.75); }
+  20% { text-shadow: 0.05em 0 0 hsl(var(--secondary) / 0.75), -0.05em 0 0 hsl(var(--primary) / 0.75); }
+  99% { text-shadow: 0.05em 0 0 hsl(var(--secondary) / 0.75), -0.05em 0 0 hsl(var(--primary) / 0.75); }
+  100% { text-shadow: -0.05em 0 0 hsl(var(--secondary) / 0.75), 0.05em 0 0 hsl(var(--primary) / 0.75); }
+}
+
 @keyframes glitch-anim-1 {
-  0% { clip-path: polygon(0 2%, 100% 2%, 100% 98%, 0 98%); }
-  25% { clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%); }
-  50% { clip-path: polygon(0 20%, 100% 20%, 100% 80%, 0 80%); }
-  75% { clip-path: polygon(0 60%, 100% 60%, 100% 40%, 0 40%); }
-  100% { clip-path: polygon(0 80%, 100% 80%, 100% 20%, 0 20%); }
+  0% { clip-path: polygon(0 0, 100% 0, 100% 5%, 0 5%); }
+  10% { clip-path: polygon(0 40%, 100% 40%, 100% 45%, 0 45%); }
+  20% { clip-path: polygon(0 20%, 100% 20%, 100% 25%, 0 25%); }
+  30% { clip-path: polygon(0 60%, 100% 60%, 100% 65%, 0 65%); }
+  40% { clip-path: polygon(0 80%, 100% 80%, 100% 85%, 0 85%); }
+  50% { clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%); }
+  60% { clip-path: polygon(0 10%, 100% 10%, 100% 15%, 0 15%); }
+  70% { clip-path: polygon(0 90%, 100% 90%, 100% 95%, 0 95%); }
+  80% { clip-path: polygon(0 30%, 100% 30%, 100% 35%, 0 35%); }
+  90% { clip-path: polygon(0 70%, 100% 70%, 100% 75%, 0 75%); }
+  100% { clip-path: polygon(0 0, 100% 0, 100% 5%, 0 5%); }
 }
 
 @keyframes glitch-anim-2 {
-  0% { clip-path: polygon(0 5%, 100% 5%, 100% 95%, 0 95%); }
-  25% { clip-path: polygon(0 35%, 100% 35%, 100% 65%, 0 65%); }
-  50% { clip-path: polygon(0 15%, 100% 15%, 100% 85%, 0 85%); }
-  75% { clip-path: polygon(0 55%, 100% 55%, 100% 45%, 0 45%); }
-  100% { clip-path: polygon(0 75%, 100% 75%, 100% 25%, 0 25%); }
+    0% { clip-path: polygon(0 95%, 100% 95%, 100% 100%, 0 100%); }
+  10% { clip-path: polygon(0 55%, 100% 55%, 100% 60%, 0 60%); }
+  20% { clip-path: polygon(0 75%, 100% 75%, 100% 80%, 0 80%); }
+  30% { clip-path: polygon(0 35%, 100% 35%, 100% 40%, 0 40%); }
+  40% { clip-path: polygon(0 15%, 100% 15%, 100% 20%, 0 20%); }
+  50% { clip-path: polygon(0 45%, 100% 45%, 100% 50%, 0 50%); }
+  60% { clip-path: polygon(0 85%, 100% 85%, 100% 90%, 0 90%); }
+  70% { clip-path: polygon(0 5%, 100% 5%, 100% 10%, 0 10%); }
+  80% { clip-path: polygon(0 65%, 100% 65%, 100% 70%, 0 70%); }
+  90% { clip-path: polygon(0 25%, 100% 25%, 100% 30%, 0 30%); }
+  100% { clip-path: polygon(0 95%, 100% 95%, 100% 100%, 0 100%); }
 }
