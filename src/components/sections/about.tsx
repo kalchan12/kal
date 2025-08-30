@@ -10,7 +10,7 @@ export function About() {
           <div className="md:col-span-1 flex justify-center">
              <Card className="p-2 border-primary/50 rounded-lg w-48 h-48">
               <Image
-                src="https://picsum.photos/200/200"
+                src="https://images.unsplash.com/photo-1562813733-b31f71025d54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxoYWNrZXJ8ZW58MHx8fHwxNzU2NTY5NDU3fDA&ixlib=rb-4.1.0&q=80&w=1080"
                 alt="Portrait"
                 width={192}
                 height={192}
