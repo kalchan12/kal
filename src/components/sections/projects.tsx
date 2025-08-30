@@ -17,7 +17,7 @@ const projects = [
   },
   {
     title: 'Ghost Query',
-    description: 'An end-to-end encrypted password manager with multi-factor authentication.',
+    description: 'A search engine for open data, powered by APIs and enhanced with AI.',
     image: 'https://images.unsplash.com/photo-1699885960867-56d5f5262d38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0eXBlc2NyaXB0fGVufDB8fHx8MTc1NjU2Nzg1MXww&ixlib=rb-4.1.0&q=80&w=1080',
     aiHint: 'cyber security',
     stack: ['TypeScript', 'Next.js', 'Tailwind', 'HTML'],
