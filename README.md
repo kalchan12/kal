@@ -1,4 +1,4 @@
-# Dimtsekal Chala - Web & Cybersecurity Enthusiast
+# CyberSecurity | Computer Science
 
 Hi! I'm Dimtsekal, a Computer Science student learning the ropes in cybersecurity and web development. 
 I love exploring Linux, Bash, Python, and experimenting with Kali Linux tools.  
