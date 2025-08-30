@@ -26,11 +26,11 @@ const projects = [
   },
   {
     title: 'Sudo Make me a Sandwitch',
-    description: 'Automated security scanner for AWS and GCP configurations.',
+    description: 'An automation script to streamline fresh Linux installations by installing a custom suite of applications from the terminal.',
     image: 'https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsaW51eHxlbnwwfHx8fDE3NTY1NjgwMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
     aiHint: 'cloud infrastructure',
-    stack: ['Python', 'Terraform', 'Docker', 'AWS Lambda'],
-    metrics: ['CI/CD Integrated', 'Real-time Alerts'],
+    stack: ['Bash', 'Python'],
+    metrics: [],
     link: '#',
   },
 ];
