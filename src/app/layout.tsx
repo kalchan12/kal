@@ -17,7 +17,7 @@ const fontHeadline = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'RetroHackerFolio',
+  title: 'kal@psycho',
   description: 'A minimal developer/penetration-tester portfolio with a retro-computer aesthetic.',
 };
 

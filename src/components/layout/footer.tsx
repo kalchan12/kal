@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="w-full border-t border-border/50 py-8">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} RetroHackerFolio. All rights reserved.
+          &copy; {new Date().getFullYear()} kal@psycho. All rights reserved.
         </p>
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" asChild>
