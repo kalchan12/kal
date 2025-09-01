@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
 
+// An array of project objects, each with a title, description, image, stack, metrics, and link.
 const projects = [
   {
     title: 'Cybersec notes and CTF writeups',
@@ -35,6 +36,11 @@ const projects = [
   },
 ];
 
+/**
+ * The Projects section of the portfolio page.
+ * It displays a list of projects in a grid layout.
+ * Each project is displayed in a Card component.
+ */
 export function Projects() {
   return (
     <section id="projects" className="py-24 sm:py-32">
@@ -48,17 +54,20 @@ export function Projects() {
             <Card key={project.title} className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1 opacity-90 hover:opacity-100">
               <CardHeader>
                 <div className="aspect-[3/2] relative">
-                    <Image src={project.image} alt={project.title} fill className="object-cover rounded-t-lg" data-ai-hint={project.aiHint}/>
+                  {/* The project image. */}
+                  <Image src={project.image} alt={project.title} fill className="object-cover rounded-t-lg" data-ai-hint={project.aiHint}/>
                 </div>
                 <CardTitle className="pt-4">{project.title}</CardTitle>
               </CardHeader>
               <CardContent className="flex-1 space-y-4">
                 <p className="text-muted-foreground">{project.description}</p>
+                {/* The technologies used in the project. */}
                 <div className="flex flex-wrap gap-2">
                   {project.stack.map((tech) => (
                     <Badge key={tech} variant="outline">{tech}</Badge>
                   ))}
                 </div>
+                {/* Any metrics associated with the project. */}
                 <div className="space-y-2">
                   {project.metrics.map(metric => (
                       <div key={metric} className="flex items-center text-xs text-muted-foreground">
@@ -69,6 +78,7 @@ export function Projects() {
                 </div>
               </CardContent>
               <CardFooter>
+                {/* A button to view the project write-up. */}
                 <Button asChild variant="secondary" className="w-full">
                   <Link href={project.link}>
                     See Writeup <ArrowRight className="ml-2 h-4 w-4" />

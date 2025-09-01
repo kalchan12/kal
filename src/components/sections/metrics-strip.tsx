@@ -2,12 +2,20 @@
 import { useAnimatedCounter } from '@/hooks/use-animated-counter';
 import { Award, Briefcase, Zap } from 'lucide-react';
 
+// An array of metrics to be displayed in the metrics strip.
 const metrics = [
   { value: 42, label: 'CTF Wins', icon: Award },
   { value: 120, label: 'Vulnerability Reports', icon: Zap },
   { value: 37, label: 'Projects Shipped', icon: Briefcase },
 ];
 
+/**
+ * A component that displays a single metric.
+ * It uses the useAnimatedCounter hook to animate the number.
+ * @param value The value of the metric.
+ * @param label The label of the metric.
+ * @param Icon The icon of the metric.
+ */
 function MetricItem({ value, label, Icon }: { value: number; label: string; Icon: React.ElementType }) {
   const { count, ref } = useAnimatedCounter(value, 2000);
   return (
@@ -19,6 +27,10 @@ function MetricItem({ value, label, Icon }: { value: number; label: string; Icon
   );
 }
 
+/**
+ * A component that displays a strip of metrics.
+ * It maps over the metrics array and renders a MetricItem for each one.
+ */
 export function MetricsStrip() {
   return (
     <section className="py-16 sm:py-20 bg-muted/20 border-y border-border/50">

@@ -1,6 +1,7 @@
 import { Progress } from '@/components/ui/progress';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
+// An array of skill categories, each with a title and a list of skills.
 const skillCategories = [
     {
         title: "Offensive Security",
@@ -31,7 +32,11 @@ const skillCategories = [
     }
 ]
 
-
+/**
+ * The Skills section of the portfolio page.
+ * It displays a list of skills categorized into different sections.
+ * Each skill has a name and a proficiency level, which is displayed as a progress bar.
+ */
 export function Skills() {
   return (
     <section id="skills" className="py-24 sm:py-32 bg-muted/20">
@@ -50,6 +55,7 @@ export function Skills() {
                                 <p className="text-sm font-medium">{skill.name}</p>
                                 <p className="text-sm text-muted-foreground">{skill.level}%</p>
                             </div>
+                            {/* A progress bar to visualize the skill level. */}
                             <Progress value={skill.level} aria-label={`${skill.name} proficiency`} />
                           </div>
                         ))}
