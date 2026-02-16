@@ -13,7 +13,7 @@ const lines = [
   '> Top Skills:',
   '>- Penetration Testing',
   '>- Web App Security',
-  '>- Reverse Engineering',
+  '>- Forensic Analysis',
   '>- Python & Go',
   '>- Cloud Security (AWS, GCP)',
   '// Mission complete.',

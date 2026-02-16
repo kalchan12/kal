@@ -4,9 +4,8 @@ import { Award, Briefcase, Zap } from 'lucide-react';
 
 // An array of metrics to be displayed in the metrics strip.
 const metrics = [
-  { value: 42, label: 'CTF Wins', icon: Award },
-  { value: 120, label: 'Vulnerability Reports', icon: Zap },
-  { value: 37, label: 'Projects Shipped', icon: Briefcase },
+  { value: 50, label: 'CTF Solved', icon: Award },
+  { value: 15, label: 'Projects Completed', icon: Briefcase },
 ];
 
 /**
@@ -19,7 +18,7 @@ const metrics = [
 function MetricItem({ value, label, Icon }: { value: number; label: string; Icon: React.ElementType }) {
   const { count, ref } = useAnimatedCounter(value, 2000);
   return (
-    <div ref={ref} className="flex flex-col items-center gap-2">
+    <div ref={ref} className="flex flex-col items-center gap-2 px-6 sm:px-8 min-w-[140px]">
       <Icon className="w-8 h-8 text-primary" />
       <p className="text-4xl font-bold font-headline tabular-nums">{count}</p>
       <p className="text-sm text-muted-foreground">{label}</p>
@@ -35,7 +34,7 @@ export function MetricsStrip() {
   return (
     <section className="py-16 sm:py-20 bg-muted/20 border-y border-border/50">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div className="flex flex-col sm:flex-row sm:justify-center items-center gap-12 sm:gap-16">
           {metrics.map((metric) => (
             <MetricItem key={metric.label} value={metric.value} label={metric.label} Icon={metric.icon} />
           ))}

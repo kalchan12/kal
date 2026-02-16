@@ -6,28 +6,19 @@ const skillCategories = [
     {
         title: "Offensive Security",
         skills: [
-            { name: 'Web Application Pentesting', level: 95 },
-            { name: 'Network Pentesting', level: 90 },
-            { name: 'Reverse Engineering', level: 75 },
+            { name: 'Web Application Pentesting', level: 80 },
+            { name: 'Network Pentesting', level: 70 },
+            { name: 'Forensic Analysis', level: 50 },
             { name: 'Social Engineering', level: 80 },
-        ]
-    },
-    {
-        title: "Defensive Security",
-        skills: [
-            { name: 'Incident Response', level: 85 },
-            { name: 'Threat Modeling', level: 90 },
-            { name: 'Secure Code Review', level: 95 },
-            { name: 'SIEM & Log Analysis', level: 70 },
         ]
     },
     {
         title: "Programming",
         skills: [
-            { name: 'Python', level: 95 },
-            { name: 'Go', level: 85 },
-            { name: 'JavaScript / TypeScript', level: 80 },
-            { name: 'Rust', level: 65 },
+            { name: 'Python', level: 70 },
+            { name: 'Go', level: 40 },
+            { name: 'JavaScript / TypeScript', level: 60 },
+            { name: 'Dart', level: 40 },
         ]
     }
 ]
@@ -42,7 +33,7 @@ export function Skills() {
     <section id="skills" className="py-24 sm:py-32 bg-muted/20">
       <div className="container mx-auto">
         <h2 className="text-3xl font-headline md:text-4xl text-center">Technical Skills</h2>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {skillCategories.map(category => (
                 <Card key={category.title}>
                     <CardHeader>

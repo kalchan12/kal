@@ -34,6 +34,15 @@ const projects = [
     metrics: [],
     link: '#',
   },
+  {
+    title: 'Graduate Chronicles',
+    description: 'A Flutter mobile app documenting graduate journeys. Built with Dart and Flutter; repository linked below.',
+    image: 'https://images.unsplash.com/photo-1526378722915-4c3b6b0b6d6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    aiHint: 'mobile app',
+    stack: ['Flutter', 'Dart'],
+    metrics: [],
+    link: 'https://github.com/kalchan12/Graduate-Chronicles.git',
+  },
 ];
 
 /**
@@ -78,10 +87,10 @@ export function Projects() {
                 </div>
               </CardContent>
               <CardFooter>
-                {/* A button to view the project write-up. */}
+                {/* A button to view the project repository or write-up. */}
                 <Button asChild variant="secondary" className="w-full">
-                  <Link href={project.link}>
-                    See Writeup <ArrowRight className="ml-2 h-4 w-4" />
+                  <Link href={project.link} target="_blank" rel="noopener noreferrer">
+                    View Repository <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </CardFooter>

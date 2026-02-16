@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Calendar, Github, Mail } from 'lucide-react';
+import { Calendar, Github, Mail, Phone } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export function Contact() {
@@ -19,22 +19,22 @@ export function Contact() {
              </CardHeader>
              <CardContent className="space-y-4">
                  <Button asChild className="w-full justify-start gap-3" variant="outline">
-                    <Link href="mailto:chaladimtsekal@gmail.com">
-                        <Mail className="w-4 h-4 text-primary"/>
-                        <span>chaladimtsekal@gmail.com</span>
-                    </Link>
+                  <Link href="mailto:chaladimtsekal@gmail.com">
+                    <Mail className="w-4 h-4 text-primary"/>
+                    <span>chaladimtsekal@gmail.com</span>
+                  </Link>
                  </Button>
                  <Button asChild className="w-full justify-start gap-3" variant="outline">
-                    <Link href="https://github.com/kalchan12" target="_blank">
-                        <Github className="w-4 h-4 text-primary"/>
-                        <span>GitHub Profile</span>
-                    </Link>
+                  <Link href="https://github.com/kalchan12" target="_blank" rel="noopener noreferrer">
+                    <Github className="w-4 h-4 text-primary"/>
+                    <span>GitHub Profile</span>
+                  </Link>
                  </Button>
                  <Button asChild className="w-full justify-start gap-3" variant="secondary">
-                    <Link href="#">
-                        <Calendar className="w-4 h-4"/>
-                        <span>Schedule a Call</span>
-                    </Link>
+                  <Link href="tel:+251934921928">
+                    <Phone className="w-4 h-4"/>
+                    <span>+251 934 921 928</span>
+                  </Link>
                  </Button>
              </CardContent>
            </Card>

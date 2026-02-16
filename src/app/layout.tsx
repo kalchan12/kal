@@ -19,6 +19,9 @@ const fontHeadline = Space_Grotesk({
 export const metadata: Metadata = {
   title: 'kal@psycho',
   description: 'A minimal developer/penetration-tester portfolio with a retro-computer aesthetic.',
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({
